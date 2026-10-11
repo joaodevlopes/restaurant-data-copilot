@@ -1,0 +1,14 @@
+# Normaliza fim de linha para LF no repositório e na pasta de trabalho.
+# Scripts .sh executados dentro de containers Linux quebram com CRLF.
+* text=auto eol=lf
+
+# Scripts nativos do Windows mantêm CRLF.
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binários: sem conversão.
+*.png binary
+*.jpg binary
+*.parquet binary
+*.jar binary
