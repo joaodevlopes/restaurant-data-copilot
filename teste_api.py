@@ -12,7 +12,9 @@ try:
         "longitude" : -43.9345,
         "start_date" : "2026-01-01",
         "end_date" : "2026-06-30",
-        "daily" : "temperature_2m_mean,rain_sum",
+        
+        "daily" : "temperature_2m_mean,temperature_2m_min,rain_sum,temperature_2m_max,precipitation_sum,weather_code",
+        
         "timezone" : "America/Sao_Paulo"
         },
         timeout=30,
