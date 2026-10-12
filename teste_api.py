@@ -26,7 +26,7 @@ except requests.exceptions.HTTPError as error:
     sys.exit(f"Erro: a API respondeu com status {error.response.status_code}") 
     
     
-# Monta camiho para mandar para a camada bronze
+# Monta caminho para mandar para a camada bronze
 
 agora = datetime.now(timezone.utc)
 data_extracao = agora.date().isoformat()
