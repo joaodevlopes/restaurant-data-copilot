@@ -3,10 +3,12 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+url = "https://archive-api.open-meteo.com/v1/archive"
+
 # Busca Via API
 try:
     resposta = requests.get(
-    "https://archive-api.open-meteo.com/v1/archive",
+    url,
     params={
         "latitude" : -19.9167,
         "longitude" : -43.9345,
@@ -17,6 +19,7 @@ try:
         
         "timezone" : "America/Sao_Paulo"
         },
+        headers = {"User-Agent": "restaurant_data_copilot/0.1(+https://github.com/joaodevlopes/restaurant-data-copilot)"},
         timeout=30,
     )
     resposta.raise_for_status()
